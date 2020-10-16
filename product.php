@@ -471,7 +471,8 @@ $page='page1';
              $img=$rows['image'];
              $price=$rows['price'];
              $name=$rows['pname'];  
-             $desc=$rows['description'];   
+             $desc=$rows['description'];
+             $pid=$rows['product_id'];   
             ?>  
           
               <ul class="aa-product-catg">
@@ -552,6 +553,7 @@ $page='page1';
                             </div>
                           </div>
                         </div>
+                      
                         <!-- Modal view content -->
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <div class="aa-product-view-content">
@@ -562,7 +564,7 @@ $page='page1';
                           <p class="aa-product-avilability">
                           Avilability: <span>In stock</span></p>
                       </div>
-                      <p><?php echo $desc ;?></p>
+                      <p><?php echo $desc ?></p>
                             <h4>Size</h4>
                             <div class="aa-prod-view-size">
                               <!-- <a href="#">S</a>
@@ -679,11 +681,20 @@ $page='page1';
               <h3>Shop By Price</h3>              
               <!-- price range -->
               <div class="aa-sidebar-price-range">
+              <?php
+              $sql3="SELECT Max(`price`) AS max, Min(`price`) As min from products";
+              $result3=$conn->query($sql3);
+               if ($result3->num_rows >0) {
+                 while($rows=$result3->fetch_assoc()) {
+               $max=$rows['max'];
+               $min=$rows['min'];
+                 }}
+              ?>
                <form action="">
                   <div id="skipstep" class="noUi-target noUi-ltr 
                   noUi-horizontal noUi-background">
                   </div>
-                  <span id="skip-value-lower" class="example-val">30.00</span>
+                  <span id="skip-value-lower" class="example-val"><?php echo $min ?></span>
                  <span id="skip-value-upper" class="example-val">100.00</span>
                  <button class="aa-filter-btn" type="submit">Filter</button>
                        
@@ -704,9 +715,10 @@ $page='page1';
                                 $colorcode=$rows['color_code']; 
                                 ?>
 
-                <div style="float:left;width:60px;height:40px">
+                <div style="float:left;">
                 <a  href="product.php?colorid=<?php echo $rows['color_id'];?>">
                 <input type="color" value="<?php echo $colorcode ;?>" 
+                style="border:none;width:40px;height:30px;margin-left:10px"
                 disabled></a></div>
                 <!-- <a class="aa-color-yellow" href="#"></a>
                 <a class="aa-color-pink" href="#"></a>

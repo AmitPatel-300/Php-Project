@@ -110,7 +110,7 @@
             echo '<td>'.$desc.'</td>';
             echo '<td>'.$tags.'</td>';
             echo '<td>'.$cid.'</td>';
-            echo '<td><input type="color" value='.$color.' disabled></td>';
+            echo '<td><input type="color" value='.$color.' style="border:none;width:40px;height:30px;"  disabled></td>';
             echo '<td>
             <!-- Icons -->
             <a href="editProducts.php?id='.$rows['product_id'].'&name='.$rows['pname'].'&price='.$rows['price'].'&image='.$rows['image'].'&desc='.$rows['description'].'&tags='.$rows['tags'].'&cate='.$rows['category_id'].'&color='.$rows['color_id'].' " title="Edit">
@@ -177,7 +177,8 @@ or "column-right" on fieldsets to divide the form into columns -->
                 $rows=$result->fetch_assoc();
                 ?>         
         <input type="radio" name="colour" value="<?php echo $rows["color_id"] ;?>">
-                <input type="color" value="<?php echo $rows["color_code"] ;?>"></option>
+                <input type="color" value="<?php echo $rows["color_code"] ;?>" 
+                style="border:none;width:40px;height:30px;" disabled></option>
                 <?php
             } 
             ?>

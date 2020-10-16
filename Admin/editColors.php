@@ -66,7 +66,8 @@ or "column-right" on fieldsets to divide the form into columns -->
                         <label>Name</label>
                         <input class="text-inputmedium-input datepicker" 
                         type="color" id="medium-input" 
-                        name="colour" value=<?php echo "'$color'"?>/> 
+                        name="colour" value=<?php echo "'$color'"?>
+                        style="border:none;width:40px;height:30px;"/> 
                         <br/><small>Update Color</small>
             </p>
 

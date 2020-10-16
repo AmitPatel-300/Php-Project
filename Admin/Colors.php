@@ -122,7 +122,8 @@ or "column-right" on fieldsets to divide the form into columns -->
 
     <p>
             <label>Color</label>
-            <input type="color" id="medium-input" name="colour" /> 
+            <input type="color" id="medium-input" name="colour"
+            style="border:none;width:40px;height:30px;" /> 
             <br/><small>Add color</small> 
     </p>
 

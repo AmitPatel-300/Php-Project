@@ -124,7 +124,8 @@ or "column-right" on fieldsets to divide the form into columns -->
                 }
                 ?>        
                  <input type="radio" name="col" required value="<?php echo $rows["color_id"] ;?>">
-                <input type="color" value="<?php echo $rows["color_code"] ;?>"></option>
+                <input type="color" value="<?php echo $rows["color_code"] ;?>" 
+                style="border:none;width:40px;height:30px;" disabled></option>
                 <?php
             } 
             ?>
