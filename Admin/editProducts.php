@@ -111,7 +111,7 @@ or "column-right" on fieldsets to divide the form into columns -->
             $count=$result->num_rows;
             ?>
             <?php
-            for ($i=0;$i<=$count ;$i++) {
+            for ($i=0;$i<$count ;$i++) {
                 $rows=$result->fetch_assoc();
                 ?> 
                 <?php 
@@ -123,9 +123,7 @@ or "column-right" on fieldsets to divide the form into columns -->
                     }
                 }
                 ?>        
-                <input type="radio" name="colour"  <?php if($pcolor == $rows["color_id"] ) : echo "checked"?>
-                value="<?php echo $rows["color_id"] ;?>" 
-               <?php endif ;?>>
+                 <input type="radio" name="col" required value="<?php echo $rows["color_id"] ;?>">
                 <input type="color" value="<?php echo $rows["color_code"] ;?>"></option>
                 <?php
             } 
@@ -170,7 +168,7 @@ or "column-right" on fieldsets to divide the form into columns -->
             $count=$result->num_rows;
             ?>
             <?php
-            for ($i=0;$i<=$count ;$i++) {
+            for ($i=0;$i<$count ;$i++) {
                 $rows=$result->fetch_assoc();
                 ?>
                 <?php 

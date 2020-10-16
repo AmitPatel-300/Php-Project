@@ -407,6 +407,7 @@ $page='page1';
             <div class="aa-product-catg-body">
 <?php require 'config.php' ?>
   <?php 
+
     if (isset($_GET['page1']))
     {
       $page='page1';
@@ -420,36 +421,50 @@ $page='page1';
     }
     else 
     if (isset($_GET['page4'])) {
-      $page='page4';
+        $page='page4';
     }
     else 
     if (isset($_GET['page5'])) {
-      $page='page5';
+        $page='page5';
     }
 
-
+  
     if($page=='page1') {
-    $sql="Select * from products LIMIT 10 OFFSET 0";
+        $sql="Select * from products LIMIT 10 OFFSET 0";
     }else
     if($page == 'page2')
     {
-      $sql="Select * from products LIMIT 10 OFFSET 10";
+        $sql="Select * from products LIMIT 10 OFFSET 10";
     }
     else
     if($page == 'page3')
     {
-      $sql="Select * from products LIMIT 10 OFFSET 20";
+        $sql="Select * from products LIMIT 10 OFFSET 20";
     }
     else
     if($page == 'page4')
     {
-      $sql="Select * from products LIMIT 10 OFFSET 30";
+        $sql="Select * from products LIMIT 10 OFFSET 30";
+    } else
+    if($page == 'page5') {
+        $sql="Select * from products LIMIT 10 OFFSET 40";
     }
-    else
-    if($page == 'page5')
-    {
-      $sql="Select * from products LIMIT 10 OFFSET 40";
+
+    if (isset($_REQUEST['catid'])) {
+        $cid=$_REQUEST['catid'];
+         $sql="SELECT * from products WHERE category_id='".$cid."'";
     }
+
+    if (isset($_REQUEST['tagid'])) {
+        $tagid=$_REQUEST['tagid'];
+        $sql="SELECT * from products where `tags`='".$tagid."'";
+    }
+
+    if (isset($_REQUEST['colorid'])) {
+        $colorid=$_REQUEST['colorid'];
+        $sql="SELECT * from products where `color_id`='".$colorid."'";
+    }
+
     $result=$conn->query($sql);
     if ($result->num_rows>0) {
         while ($rows=$result->fetch_assoc()) {
@@ -464,7 +479,9 @@ $page='page1';
                 <li>
                   
                   <figure>
-                    <a class="aa-product-img" href="#"><img style="width:250px;height:260px" src="<?php echo $img ?>" 
+                  <a class="aa-product-img" href="#">
+                  <img style="width:250px;height:260px" 
+                    src="<?php echo $img ?>" 
                     alt="polo shirt img"></a>
                     <a class="aa-add-card-btn"href="#">
                     <span class="fa fa-shopping-cart"></span>Add To Cart</a>
@@ -626,7 +643,7 @@ $page='page1';
             while ($rows=$result->fetch_assoc()) {
                 $cat=$rows['cname']; 
                 ?>  
-                <li><a href="#" ><?php echo $cat?></a></li>
+                <li><a href="product.php?catid=<?php echo $rows['category_id'];?>" ><?php echo $cat?></a></li>
                 <!-- <li><a href="">Women</a></li>
                 <li><a href="">Kids</a></li>
                 <li><a href="">Electornics</a></li>
@@ -634,7 +651,7 @@ $page='page1';
                 <?php
             }
         }
-      ?>
+        ?>
               </ul>
             </div>
       
@@ -649,7 +666,7 @@ $page='page1';
                 while ($rows=$result->fetch_assoc()) {
                     $tag=$rows['tname']; 
                     ?>  
-                <a href="#"><?php echo $tag?></a>
+                <a href="product.php?tagid=<?php echo $rows['tag_id'];?>"><?php echo $tag?></a>
 
                     <?php
                 }
@@ -679,15 +696,17 @@ $page='page1';
             
               <h3>Shop By Color</h3>
               <div class="aa-color-tag">
-              <?php
-            $sql="Select * from colors ";
-            $result=$conn->query($sql);
-            if ($result->num_rows>0) {
-                while ($rows=$result->fetch_assoc()) {
-                    $colorcode=$rows['color_code']; 
-                    ?>
-              
-                <div style="float:left;width:60px;height:60px"><a href="#"><input type="color" value="<?php echo $colorcode ;?>" 
+                        <?php
+                        $sql="Select * from colors ";
+                        $result=$conn->query($sql);
+                        if ($result->num_rows>0) {
+                            while ($rows=$result->fetch_assoc()) {
+                                $colorcode=$rows['color_code']; 
+                                ?>
+
+                <div style="float:left;width:60px;height:40px">
+                <a  href="product.php?colorid=<?php echo $rows['color_id'];?>">
+                <input type="color" value="<?php echo $colorcode ;?>" 
                 disabled></a></div>
                 <!-- <a class="aa-color-yellow" href="#"></a>
                 <a class="aa-color-pink" href="#"></a>
@@ -700,10 +719,10 @@ $page='page1';
                 <a class="aa-color-cyan" href="#"></a>
                 <a class="aa-color-olive" href="#"></a>
                 <a class="aa-color-orchid" href="#"></a> -->
-              <?php
-                }
-              } 
-              ?>
+                                    <?php
+                            } 
+                        } 
+                        ?>
                </div>                            
             </div>
             <!-- single sidebar -->

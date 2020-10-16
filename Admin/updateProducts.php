@@ -29,7 +29,7 @@ if (isset($_POST['update'])) {
     $desc = isset($_POST['desc'])?$_POST['desc']:'';
     $cid = isset($_POST['catid'])?$_POST['catid']:'';
     $tag = implode(' ', $_POST['tag']);
-    $color = isset($_POST['colour'])?$_POST['colour']:'';
+    $color=isset($_POST['col'])?$_POST['col']:'';
     echo $color;
 
     $folder = "images/".$image;

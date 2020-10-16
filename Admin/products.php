@@ -173,7 +173,7 @@ or "column-right" on fieldsets to divide the form into columns -->
             $count=$result->num_rows;
             ?>
             <?php
-            for ($i=0;$i<=$count ;$i++) {
+            for ($i=0;$i<$count ;$i++) {
                 $rows=$result->fetch_assoc();
                 ?>         
         <input type="radio" name="colour" value="<?php echo $rows["color_id"] ;?>">
@@ -209,7 +209,7 @@ or "column-right" on fieldsets to divide the form into columns -->
             $count=$result->num_rows;
             ?>
             <?php
-            for ($i=0;$i<=$count ;$i++) {
+            for ($i=0;$i<$count ;$i++) {
                 $rows=$result->fetch_assoc();
                 ?>         
         <input type="checkbox" name="tag[]" value="<?php echo $rows["tag_id"] ;?>">
