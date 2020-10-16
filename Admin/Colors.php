@@ -91,11 +91,11 @@ title="Close this notification" alt="close" /></a>
             $colorcode = $rows['color_code'];
             
             echo '<td>'.$colorid.'</td>';
-            echo '<td>'.$colorname.'</td>';
+            echo '<td>'.$colorcode.'</td>';
             
             echo '<td>
             <!-- Icons -->
-            <a href="editColors.php?id='.$rows['color_id'].'&name='.$rows['color_code'].' " title="Edit">
+            <a href="editColors.php?id='.$rows['color_id'].'&code='.$rows['color_code'].' " title="Edit">
             <img src="resources/images/icons/pencil.png" alt="Edit" /></a>
             <a href="deleteColors.php?id='.$rows['color_id'].'" title="Delete">
             <img src="resources/images/icons/cross.png" alt="Delete" /></a> 
@@ -115,7 +115,7 @@ title="Close this notification" alt="close" /></a>
 
 <div class="tab-content" id="tab2">
 
-<form action="addCategory.php" method="post">
+<form action="addColor.php" method="post">
 
 <fieldset> <!-- Set class to "column-left" 
 or "column-right" on fieldsets to divide the form into columns -->

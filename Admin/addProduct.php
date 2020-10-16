@@ -27,7 +27,7 @@ if (isset($_POST['add'])) {
     $cid = isset($_POST['catid'])?$_POST['catid']:'';
     $tag = implode(' ', $_POST['tag']);
     $color = isset($_POST['colour'])?$_POST['colour']:'';
-    echo $tag;
+   
     
     $folder = "images/".$image;
     if (move_uploaded_file($tempname, $folder)) {
@@ -38,7 +38,7 @@ if (isset($_POST['add'])) {
     } 
     
     $sql="INSERT INTO products(`pname`, `price`, `image`, `description` ,
-     `category_id` , `tags` , `color`) VALUES ('".$pname."',
+     `category_id` , `tags` , `color_id`) VALUES ('".$pname."',
      '".$price."', '".$folder."', '".$desc."', '".$cid."', '".$tag."' , '".$color."')";
 
      $result=$conn->query($sql);

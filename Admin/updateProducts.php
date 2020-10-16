@@ -29,8 +29,9 @@ if (isset($_POST['update'])) {
     $desc = isset($_POST['desc'])?$_POST['desc']:'';
     $cid = isset($_POST['catid'])?$_POST['catid']:'';
     $tag = implode(' ', $_POST['tag']);
-    echo $tag;
-    
+    $color = isset($_POST['colour'])?$_POST['colour']:'';
+    echo $color;
+
     $folder = "images/".$image;
     if (move_uploaded_file($tempname, $folder)) {
         $errors=array('input'=> 'form' , 'msg'=>'image added successfully');
@@ -40,8 +41,8 @@ if (isset($_POST['update'])) {
     } 
     
     $sql="UPDATE products SET pname='".$pname."', price='".$price."',
-    `image`='".$image."', `description`='".$desc."', category_id='".$cid."',
-     tags='".$tag."' WHERE product_id='".$pid."'";
+    `image`='".$folder."', `description`='".$desc."', category_id='".$cid."',
+     tags='".$tag."', `color_id`='".$color."' WHERE product_id='".$pid."'";
      $result=$conn->query($sql);
     if ($result === true) {
         header('location:products.php'); 

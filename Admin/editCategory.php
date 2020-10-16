@@ -67,7 +67,7 @@ or "column-right" on fieldsets to divide the form into columns -->
                         <input class="text-inputmedium-input datepicker" 
                         type="text" id="medium-input" 
                         name="cname" value=<?php echo "'$cname'"?>/> 
-                        <br/><small>Update Tag</small>
+                        <br/><small>Update Category</small>
             </p>
 
     

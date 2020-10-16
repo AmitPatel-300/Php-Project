@@ -13,12 +13,9 @@
 ?>
 <?php require 'config.php' ;?>
 <?php
-$colorid=$_REQUEST['id'];
-?>
-<?php
-if (isset($_POST['upcol'])) {
-    $colorcode=isset($_POST['colour'])?$_POST['colour']:'';
-    $sql="UPDATE colors SET color_code='".$colorcode."' WHERE color_id='".$colorid."'";
+if (isset($_POST['col'])) {
+    $color=isset($_POST['colour'])?$_POST['colour']:'';
+    $sql="INSERT INTO colors(`color_code`) VALUES ('".$color."')";
     $result=$conn->query($sql);
     if ($result === true) {
         header('location:Colors.php'); 
@@ -27,4 +24,3 @@ if (isset($_POST['upcol'])) {
     }
     $conn->close();
 }
-?>

@@ -676,10 +676,20 @@ $page='page1';
             </div>
             <!-- single sidebar -->
             <div class="aa-sidebar-widget">
+            
               <h3>Shop By Color</h3>
               <div class="aa-color-tag">
-                <a class="aa-color-green" href="#"></a>
-                <a class="aa-color-yellow" href="#"></a>
+              <?php
+            $sql="Select * from colors ";
+            $result=$conn->query($sql);
+            if ($result->num_rows>0) {
+                while ($rows=$result->fetch_assoc()) {
+                    $colorcode=$rows['color_code']; 
+                    ?>
+              
+                <div style="float:left;width:60px;height:60px"><a href="#"><input type="color" value="<?php echo $colorcode ;?>" 
+                disabled></a></div>
+                <!-- <a class="aa-color-yellow" href="#"></a>
                 <a class="aa-color-pink" href="#"></a>
                 <a class="aa-color-purple" href="#"></a>
                 <a class="aa-color-blue" href="#"></a>
@@ -689,8 +699,12 @@ $page='page1';
                 <a class="aa-color-white" href="#"></a>
                 <a class="aa-color-cyan" href="#"></a>
                 <a class="aa-color-olive" href="#"></a>
-                <a class="aa-color-orchid" href="#"></a>
-              </div>                            
+                <a class="aa-color-orchid" href="#"></a> -->
+              <?php
+                }
+              } 
+              ?>
+               </div>                            
             </div>
             <!-- single sidebar -->
             <div class="aa-sidebar-widget">

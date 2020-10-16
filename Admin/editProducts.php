@@ -19,6 +19,8 @@ $image=$_REQUEST['image'];
 $desc=$_REQUEST['desc'];
 $tags=$_REQUEST['tags'];
 $cid=$_REQUEST['cate'];
+$color=$_REQUEST['color'];
+$pcolor;
 $pcatid;
 $ptags;
 ?>
@@ -100,6 +102,35 @@ or "column-right" on fieldsets to divide the form into columns -->
             success, error, information, attention -->
             <br /><small>choose product image</small>
     </p>
+
+    <p>     
+             <?php $sql="SELECT * from colors" ?>
+            <label>Color</label>
+            <?php
+            $result=$conn->query($sql);
+            $count=$result->num_rows;
+            ?>
+            <?php
+            for ($i=0;$i<=$count ;$i++) {
+                $rows=$result->fetch_assoc();
+                ?> 
+                <?php 
+                $sql2="SELECT * from products where product_id='".$pid."'";
+                $result2=$conn->query($sql2);
+                if ($result2->num_rows>0) {
+                    while ($row=$result2->fetch_assoc()) {
+                        $pcolor=$row['color_id'];
+                    }
+                }
+                ?>        
+                <input type="radio" name="colour"  <?php if($pcolor == $rows["color_id"] ) : echo "checked"?>
+                value="<?php echo $rows["color_id"] ;?>" 
+               <?php endif ;?>>
+                <input type="color" value="<?php echo $rows["color_code"] ;?>"></option>
+                <?php
+            } 
+            ?>
+    <p>
     
     <p>
             <?php $sql="SELECT * from categories" ?>

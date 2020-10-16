@@ -100,7 +100,7 @@
             $desc = $rows['description'];
             $tags = $rows['tags'];
             $cid = $rows['category_id'];
-            $color = $rows['color'];
+            $color = $rows['color_id'];
           
            
             echo '<td>'.$pid.'</td>';
@@ -113,7 +113,7 @@
             echo '<td><input type="color" value='.$color.' disabled></td>';
             echo '<td>
             <!-- Icons -->
-            <a href="editProducts.php?id='.$rows['product_id'].'&name='.$rows['pname'].'&price='.$rows['price'].'&image='.$rows['image'].'&desc='.$rows['description'].'&tags='.$rows['tags'].'&cate='.$rows['category_id'].' " title="Edit">
+            <a href="editProducts.php?id='.$rows['product_id'].'&name='.$rows['pname'].'&price='.$rows['price'].'&image='.$rows['image'].'&desc='.$rows['description'].'&tags='.$rows['tags'].'&cate='.$rows['category_id'].'&color='.$rows['color_id'].' " title="Edit">
             <img src="resources/images/icons/pencil.png" alt="Edit" /></a>
             <a href="deleteProducts.php?id='.$rows['product_id'].' " title="Delete">
             <img src="resources/images/icons/cross.png" alt="Delete" /></a> 
@@ -165,12 +165,23 @@ or "column-right" on fieldsets to divide the form into columns -->
             <br /><small>choose product image</small>
     </p>
 
+    <p>     
+             <?php $sql="SELECT * from colors" ?>
+            <label>Color</label>
+            <?php
+            $result=$conn->query($sql);
+            $count=$result->num_rows;
+            ?>
+            <?php
+            for ($i=0;$i<=$count ;$i++) {
+                $rows=$result->fetch_assoc();
+                ?>         
+        <input type="radio" name="colour" value="<?php echo $rows["color_id"] ;?>">
+                <input type="color" value="<?php echo $rows["color_code"] ;?>"></option>
+                <?php
+            } 
+            ?>
     <p>
-        <label>Color</label>
-            <input  type="color" 
-            id="clr"  name="colour"  /> 
-            <br /><small>Add product color</small> 
-    </p>
     
     <p>
             <?php $sql="SELECT * from categories" ?>
