@@ -14,7 +14,7 @@
 ?>
 <?php $filename = basename($_SERVER['REQUEST_URI']);
 
-$productname = array('products.php', 'categories.php','tags.php'); 
+$productname = array('products.php', 'categories.php','tags.php', 'Colors.php'); 
 ?>
 <a href="#"><img id="logo" 
 src="resources/images/logo.png" alt="Simpla Admin logo" /></a>
@@ -52,6 +52,8 @@ href="products.php">Products</a></li>
 <?php endif ;?> href="categories.php">Categories</a></li>
 <li><a <?php if($filename == 'tags.php') :?> class="current" 
 <?php endif ;?> href="tags.php">Tags</a></li>
+<li><a <?php if($filename == 'Colors.php') :?> class="current" 
+<?php endif ;?> href="Colors.php">Color</a></li>
 </ul>
 </li>
 

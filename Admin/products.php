@@ -166,7 +166,7 @@ or "column-right" on fieldsets to divide the form into columns -->
     </p>
 
     <p>
-        <label>Price</label>
+        <label>Color</label>
             <input  type="color" 
             id="clr"  name="colour"  /> 
             <br /><small>Add product color</small> 

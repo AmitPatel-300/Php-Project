@@ -458,16 +458,13 @@ $page='page1';
              $name=$rows['pname'];  
              $desc=$rows['description'];   
             ?>  
-            
-            
-            
-
+          
               <ul class="aa-product-catg">
                 <!-- start single product item -->
                 <li>
                   
                   <figure>
-                    <a class="aa-product-img" href="#"><img src="<?php echo $img ?>" 
+                    <a class="aa-product-img" href="#"><img style="width:250px;height:260px" src="<?php echo $img ?>" 
                     alt="polo shirt img"></a>
                     <a class="aa-add-card-btn"href="#">
                     <span class="fa fa-shopping-cart"></span>Add To Cart</a>
@@ -646,13 +643,13 @@ $page='page1';
               <h3>Tags</h3>
               <div class="tag-cloud">
             <?php
-            $sql="Select * tags categories";
+            $sql="Select * from tags ";
             $result=$conn->query($sql);
             if ($result->num_rows>0) {
                 while ($rows=$result->fetch_assoc()) {
-                    $cat=$rows['cname']; 
+                    $tag=$rows['tname']; 
                     ?>  
-                <a href="#">Fashion</a>
+                <a href="#"><?php echo $tag?></a>
 
                     <?php
                 }
@@ -672,6 +669,7 @@ $page='page1';
                   <span id="skip-value-lower" class="example-val">30.00</span>
                  <span id="skip-value-upper" class="example-val">100.00</span>
                  <button class="aa-filter-btn" type="submit">Filter</button>
+                       
                </form>
               </div>              
 
