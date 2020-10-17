@@ -42,8 +42,10 @@ $page='page1';
     <link href="css/style.css" rel="stylesheet">    
 
     <!-- Google Font -->
-    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato' 
+    rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway' 
+    rel='stylesheet' type='text/css'>
     
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -88,8 +90,10 @@ $page='page1';
                       <span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                      <li><a href="#"><img src="img/flag/french.jpg" alt="">FRENCH</a></li>
-                      <li><a href="#"><img src="img/flag/english.jpg" alt="">ENGLISH</a></li>
+                      <li><a href="#"><img src="img/flag/french.jpg"
+                       alt="">FRENCH</a></li>
+                      <li><a href="#"><img src="img/flag/english.jpg" 
+                      alt="">ENGLISH</a></li>
                     </ul>
                   </div>
                 </div>
@@ -98,7 +102,9 @@ $page='page1';
                 <!-- start currency -->
                 <div class="aa-currency">
                   <div class="dropdown">
-                    <a class="btn dropdown-toggle" href="#" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    <a class="btn dropdown-toggle" href="#" type="button" 
+                    id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" 
+                    aria-expanded="true">
                       <i class="fa fa-usd"></i>USD
                       <span class="caret"></span>
                     </a>
@@ -122,7 +128,8 @@ $page='page1';
                   <li class="hidden-xs"><a href="wishlist.html">Wishlist</a></li>
                   <li class="hidden-xs"><a href="cart.html">My Cart</a></li>
                   <li class="hidden-xs"><a href="checkout.html">Checkout</a></li>
-                  <li><a href="" data-toggle="modal" data-target="#login-modal">Login</a></li>
+                  <li><a href="" data-toggle="modal" data-target="#login-modal">
+                  Login</a></li>
                 </ul>
               </div>
             </div>
@@ -143,10 +150,12 @@ $page='page1';
                 <!-- Text based logo -->
                 <a href="index.html">
                   <span class="fa fa-shopping-cart"></span>
-                  <p>daily<strong>Shop</strong> <span>Your Shopping Partner</span></p>
+                  <p>daily<strong>Shop</strong>
+                   <span>Your Shopping Partner</span></p>
                 </a>
                 <!-- img based logo -->
-                <!-- <a href="index.html"><img src="img/logo.jpg" alt="logo img"></a> -->
+                <!-- <a href="index.html">
+                <img src="img/logo.jpg" alt="logo img"></a> -->
               </div>
               <!-- / logo  -->
                <!-- cart box -->
@@ -159,20 +168,24 @@ $page='page1';
                 <div class="aa-cartbox-summary">
                   <ul>
                     <li>
-                      <a class="aa-cartbox-img" href="#"><img src="img/woman-small-2.jpg" alt="img"></a>
+                      <a class="aa-cartbox-img" href="#">
+                      <img src="img/woman-small-2.jpg" alt="img"></a>
                       <div class="aa-cartbox-info">
                         <h4><a href="#">Product Name</a></h4>
                         <p>1 x $250</p>
                       </div>
-                      <a class="aa-remove-product" href="#"><span class="fa fa-times"></span></a>
+                      <a class="aa-remove-product" href="#">
+                      <span class="fa fa-times"></span></a>
                     </li>
                     <li>
-                      <a class="aa-cartbox-img" href="#"><img src="img/woman-small-1.jpg" alt="img"></a>
+                      <a class="aa-cartbox-img" href="#">
+                      <img src="img/woman-small-1.jpg" alt="img"></a>
                       <div class="aa-cartbox-info">
                         <h4><a href="#">Product Name</a></h4>
                         <p>1 x $250</p>
                       </div>
-                      <a class="aa-remove-product" href="#"><span class="fa fa-times"></span></a>
+                      <a class="aa-remove-product" href="#">
+                      <span class="fa fa-times"></span></a>
                     </li>                    
                     <li>
                       <span class="aa-cartbox-total-title">
@@ -190,7 +203,8 @@ $page='page1';
               <!-- search box -->
               <div class="aa-search-box">
                 <form action="">
-                  <input type="text" name="" id="" placeholder="Search here ex. 'man' ">
+                  <input type="text" name="" id="" 
+                  placeholder="Search here ex. 'man' ">
                   <button type="submit"><span class="fa fa-search"></span></button>
                 </form>
               </div>
@@ -210,7 +224,8 @@ $page='page1';
         <!-- Navbar -->
         <div class="navbar navbar-default" role="navigation">
           <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" 
+            data-target=".navbar-collapse">
               <span class="sr-only">Toggle navigation</span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
@@ -226,7 +241,8 @@ $page='page1';
                   <li><a href="#">Casual</a></li>
                   <li><a href="#">Sports</a></li>
                   <li><a href="#">Formal</a></li>
-                  <li><a href="#">Standard</a></li>                                                
+                  <li><a href="#">Standard</a></li>   
+                                                               
                   <li><a href="#">T-Shirts</a></li>
                   <li><a href="#">Shirts</a></li>
                   <li><a href="#">Jeans</a></li>
@@ -235,14 +251,16 @@ $page='page1';
                     <ul class="dropdown-menu">
                       <li><a href="#">Sleep Wear</a></li>
                       <li><a href="#">Sandals</a></li>
-                      <li><a href="#">Loafers</a></li>                                      
+                      <li><a href="#">Loafers</a></li>
+
                     </ul>
                   </li>
                 </ul>
               </li>
               <li><a href="#">Women <span class="caret"></span></a>
                 <ul class="dropdown-menu">  
-                  <li><a href="#">Kurta & Kurti</a></li>                                                                
+                  <li><a href="#">Kurta & Kurti</a></li>
+                                                                                  
                   <li><a href="#">Trousers</a></li>              
                   <li><a href="#">Casual</a></li>
                   <li><a href="#">Sports</a></li>
@@ -260,7 +278,8 @@ $page='page1';
                           <li><a href="#">Earrings</a></li>
                           <li><a href="#">Jewellery Sets</a></li>
                           <li><a href="#">Lockets</a></li>
-                          <li class="disabled"><a class="disabled" href="#">Disabled item</a></li>                       
+                          <li class="disabled"><a class="disabled" 
+                          href="#">Disabled item</a></li>                       
                           <li><a href="#">Jeans</a></li>
                           <li><a href="#">Polo T-Shirts</a></li>
                           <li><a href="#">SKirts</a></li>
@@ -273,7 +292,8 @@ $page='page1';
                           <li><a href="#">Hand Bags</a></li>
                           <li><a href="#">Single Bags</a></li>
                           <li><a href="#">Travel Bags</a></li>
-                          <li><a href="#">Wallets & Belts</a></li>                        
+                          <li><a href="#">Wallets & Belts</a></li> 
+
                           <li><a href="#">Sunglases</a></li>
                           <li><a href="#">Nail</a></li>                       
                         </ul>
@@ -287,7 +307,8 @@ $page='page1';
                   <li><a href="#">Casual</a></li>
                   <li><a href="#">Sports</a></li>
                   <li><a href="#">Formal</a></li>
-                  <li><a href="#">Standard</a></li>                                                
+                  <li><a href="#">Standard</a></li>
+
                   <li><a href="#">T-Shirts</a></li>
                   <li><a href="#">Shirts</a></li>
                   <li><a href="#">Jeans</a></li>
@@ -296,7 +317,8 @@ $page='page1';
                     <ul class="dropdown-menu">
                       <li><a href="#">Sleep Wear</a></li>
                       <li><a href="#">Sandals</a></li>
-                      <li><a href="#">Loafers</a></li>                                      
+                      <li><a href="#">Loafers</a></li> 
+
                     </ul>
                   </li>
                 </ul>
@@ -307,7 +329,8 @@ $page='page1';
                   <li><a href="#">Camera</a></li>
                   <li><a href="#">Mobile</a></li>
                   <li><a href="#">Tablet</a></li>
-                  <li><a href="#">Laptop</a></li>                                                
+                  <li><a href="#">Laptop</a></li>  
+
                   <li><a href="#">Accesories</a></li>                
                 </ul>
               </li>
@@ -323,7 +346,8 @@ $page='page1';
               <li><a href="#">Pages <span class="caret"></span></a>
                 <ul class="dropdown-menu">                
                   <li><a href="product.html">Shop Page</a></li>
-                  <li><a href="product-detail.html">Shop Single</a></li>                
+                  <li><a href="product-detail.html">Shop Single</a></li>  
+
                   <li><a href="404.html">404 Page</a></li>                
                 </ul>
               </li>
@@ -363,11 +387,11 @@ $page='page1';
             <div class="aa-product-details-content">
               <div class="row">
               <?php
-              $ppid=$_REQUEST['pid'];
+                $ppid=$_REQUEST['pid'];
                     $sql="Select * from products where product_id='".$ppid."' ";
                     $result=$conn->query($sql);
-                    if ($result->num_rows>0) {
-                        while ($rows=$result->fetch_assoc()) {
+                if ($result->num_rows>0) {
+                    while ($rows=$result->fetch_assoc()) {
                             $img=$rows['image'];
                             $price=$rows['price'];
                             $name=$rows['pname'];  
@@ -376,8 +400,10 @@ $page='page1';
                             $category=$rows['category_id'];
                         ?>  
                 <!-- Modal view slider -->
-                <div class="col-md-5 col-sm-5 col-xs-12">                              
-                  <div class="aa-product-view-slider">                                
+                <div class="col-md-5 col-sm-5 col-xs-12"> 
+
+                  <div class="aa-product-view-slider">  
+
                     <div id="demo-1" class="simpleLens-gallery-container">
                       <div class="simpleLens-container">
                         <div class="simpleLens-big-image-container">
@@ -387,13 +413,20 @@ $page='page1';
                          class="simpleLens-big-image"></a></div>
                       </div>
                       <!-- <div class="simpleLens-thumbnails-container">
-                          <a data-big-image="img/view-slider/medium/polo-shirt-1.png" data-lens-image="img/view-slider/large/polo-shirt-1.png" class="simpleLens-thumbnail-wrapper" href="#">
+                          <a data-big-image="img/view-slider/medium/polo-shirt-1.png"
+                           data-lens-image="img/view-slider/large/polo-shirt-1.png" 
+                           class="simpleLens-thumbnail-wrapper" href="#">
                             <img src="img/view-slider/thumbnail/polo-shirt-1.png">
                           </a>                                    
-                          <a data-big-image="img/view-slider/medium/polo-shirt-3.png" data-lens-image="img/view-slider/large/polo-shirt-3.png" class="simpleLens-thumbnail-wrapper" href="#">
+                          <a data-big-image="img/view-slider/medium/polo-shirt-3.png"
+                           data-lens-image="img/view-slider/large/polo-shirt-3.png"
+                            class="simpleLens-thumbnail-wrapper" href="#">
                             <img src="img/view-slider/thumbnail/polo-shirt-3.png">
                           </a>
-                          <a data-big-image="img/view-slider/medium/polo-shirt-4.png" data-lens-image="img/view-slider/large/polo-shirt-4.png" class="simpleLens-thumbnail-wrapper" href="#">
+                        <a data-big-image="img/view-slider/medium/polo-shirt-4.png" 
+
+                          data-lens-image="img/view-slider/large/polo-shirt-4.png" 
+                          class="simpleLens-thumbnail-wrapper" href="#">
                             <img src="img/view-slider/thumbnail/polo-shirt-4.png">
                           </a>
                       </div> -->
@@ -406,8 +439,10 @@ $page='page1';
                   
                     <h3> <?php echo $name ?></h3>
                     <div class="aa-price-block">
-                      <span class="aa-product-view-price"><?php echo "$".$price ?></span>
-                      <p class="aa-product-avilability">Avilability: <span>In stock</span></p>
+                      <span class="aa-product-view-price"><?php echo "$".$price ?>
+                      </span>
+                      <p class="aa-product-avilability">Avilability: <span>In stock
+                      </span></p>
                     </div>
                     <p><?php echo $desc?></p>
                     <h4>Size</h4>
@@ -441,7 +476,8 @@ $page='page1';
                         <input type="hidden" name="img" value="<?php echo $img?>">                     
                         <p class="aa-prod-category">
                         Category: <a href="#"><?php 
-                        $sql2="Select * from categories where `category_id`='".$category."'";
+                        $sql2="Select * from categories where 
+                        `category_id`='".$category."'";
                         $result=$conn->query($sql2);
                         if ($result->num_rows>0) {
                           while ($row=$result->fetch_assoc()) {
@@ -455,7 +491,8 @@ $page='page1';
                     </div>
                     <div class="aa-prod-view-bottom">
                       <input type="submit" class="aa-add-to-cart-btn" 
-                      style="background-color:transparent" value="Add To Cart" name="cart">
+                      style="background-color:transparent" value="Add To Cart" 
+                      name="cart">
                       <a class="aa-add-to-cart-btn" href="#">Wishlist</a>
                       <a class="aa-add-to-cart-btn" href="#">Compare</a>
                       </form>
@@ -471,7 +508,8 @@ $page='page1';
             <div class="aa-product-details-bottom">
               <ul class="nav nav-tabs" id="myTab2">
                 <li><a href="#description" data-toggle="tab">Description</a></li>
-                <li><a href="#review" data-toggle="tab">Reviews</a></li>                
+                <li><a href="#review" data-toggle="tab">Reviews</a></li>         
+
               </ul>
 
               <!-- Tab panes -->
@@ -481,12 +519,22 @@ $page='page1';
                   <ul>
                     <li><?php echo $desc?></li>
                     <!-- <li>Lorem ipsum dolor sit amet.</li>
-                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
-                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor qui eius esse!</li>
-                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, modi!</li> -->
+                    <li>Lorem ipsum dolor sit amet, consectetur 
+                    adipisicing elit.</li>
+                    <li>Lorem ipsum dolor sit amet, 
+                    consectetur adipisicing elit. Dolor qui eius esse!</li>
+                    <li>Lorem ipsum dolor sit amet,
+                     consectetur adipisicing elit. Quibusdam, modi!</li> -->
                   </ul>
-                  <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, iusto earum voluptates autem esse molestiae ipsam, atque quam amet similique ducimus aliquid voluptate perferendis, distinctio!</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis ea, voluptas! Aliquam facere quas cumque rerum dolore impedit, dicta ducimus repellat dignissimos, fugiat, minima quaerat necessitatibus? Optio adipisci ab, obcaecati, porro unde accusantium facilis repudiandae.</p> -->
+                  <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                   Illum, iusto earum voluptates autem esse molestiae ipsam, atque 
+                   quam amet similique ducimus aliquid voluptate perferendis, 
+                   distinctio!</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                  Blanditiis ea, voluptas! Aliquam facere quas cumque rerum dolore 
+                  impedit, dicta ducimus repellat dignissimos, 
+                  fugiat, minima quaerat necessitatibus? Optio adipisci ab, 
+                  obcaecati, porro unde accusantium facilis repudiandae.</p> -->
                 </div>
                 <div class="tab-pane fade " id="review">
                  <div class="aa-product-review-area">
@@ -496,11 +544,13 @@ $page='page1';
                         <div class="media">
                           <div class="media-left">
                             <a href="#">
-                              <img class="media-object" src="img/testimonial-img-3.jpg" alt="girl image">
+                          <img class="media-object" src="img/testimonial-img-3.jpg"
+                               alt="girl image">
                             </a>
                           </div>
                           <div class="media-body">
-                            <h4 class="media-heading"><strong>Marla Jobs</strong> - <span>March 26, 2016</span></h4>
+                            <h4 class="media-heading"><strong>Marla Jobs</strong> 
+                            - <span>March 26, 2016</span></h4>
                             <div class="aa-product-rating">
                               <span class="fa fa-star"></span>
                               <span class="fa fa-star"></span>
@@ -508,7 +558,8 @@ $page='page1';
                               <span class="fa fa-star"></span>
                               <span class="fa fa-star-o"></span>
                             </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                            <p>Lorem ipsum dolor sit amet, 
+                            consectetur adipisicing elit.</p>
                           </div>
                         </div>
                       </li>
@@ -516,11 +567,13 @@ $page='page1';
                         <div class="media">
                           <div class="media-left">
                             <a href="#">
-                              <img class="media-object" src="img/testimonial-img-3.jpg" alt="girl image">
+                           <img class="media-object" src="img/testimonial-img-3.jpg" 
+                              alt="girl image">
                             </a>
                           </div>
                           <div class="media-body">
-                            <h4 class="media-heading"><strong>Marla Jobs</strong> - <span>March 26, 2016</span></h4>
+                            <h4 class="media-heading"><strong>Marla Jobs</strong> - 
+                            <span>March 26, 2016</span></h4>
                             <div class="aa-product-rating">
                               <span class="fa fa-star"></span>
                               <span class="fa fa-star"></span>
@@ -528,7 +581,8 @@ $page='page1';
                               <span class="fa fa-star"></span>
                               <span class="fa fa-star-o"></span>
                             </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                            <p>Lorem ipsum dolor sit amet,
+                             consectetur adipisicing elit.</p>
                           </div>
                         </div>
                       </li>
@@ -546,18 +600,22 @@ $page='page1';
                    <form action="" class="aa-review-form">
                       <div class="form-group">
                         <label for="message">Your Review</label>
-                        <textarea class="form-control" rows="3" id="message"></textarea>
+                        <textarea class="form-control" rows="3" 
+                        id="message"></textarea>
                       </div>
                       <div class="form-group">
                         <label for="name">Name</label>
-                        <input type="text" class="form-control" id="name" placeholder="Name">
+                        <input type="text" class="form-control" 
+                        id="name" placeholder="Name">
                       </div>  
                       <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" class="form-control" id="email" placeholder="example@gmail.com">
+                        <input type="email" class="form-control" id="email" 
+                        placeholder="example@gmail.com">
                       </div>
 
-                      <button type="submit" class="btn btn-default aa-review-submit">Submit</button>
+                      <button type="submit" class="btn btn-default 
+                      aa-review-submit">Submit</button>
                    </form>
                  </div>
                 </div>            
@@ -571,27 +629,41 @@ $page='page1';
                 <?php
                     $sql="Select * from products LIMIT 4 OFFSET 1";
                     $result=$conn->query($sql);
-                    if ($result->num_rows>0) {
-                        while ($rows=$result->fetch_assoc()) {
-                            $img=$rows['image'];
-                            $price=$rows['price'];
-                            $name=$rows['pname'];  
-                            $desc=$rows['description'];
-                            $pid=$rows['product_id'];   
-                        ?> 
+                if ($result->num_rows>0) {
+                    while ($rows=$result->fetch_assoc()) {
+                        $img=$rows['image'];
+                        $price=$rows['price'];
+                        $name=$rows['pname'];  
+                        $desc=$rows['description'];
+                        $pid=$rows['product_id'];   
+                    ?> 
                 <li>
                   <figure>
-                    <a class="aa-product-img" href="product-detail.php?pid=<?php echo $pid;?>"><img style="width:250px;height:260px" src="<?php echo $img?>" alt="polo shirt img"></a>
-                    <a class="aa-add-card-btn"href="product-detail.php?pid=<?php echo $pid;?>"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
+                    <a class="aa-product-img" 
+                    href="product-detail.php?pid=<?php echo $pid;?>">
+                    <img style="width:250px;height:260px" src="<?php echo $img?>"
+                     alt="polo shirt img"></a>
+                    <a class="aa-add-card-btn" 
+                    href="product-detail.php?pid=<?php echo $pid;?>">
+                    <span class="fa fa-shopping-cart"></span>Add To Cart</a>
                      <figcaption>
-                      <h4 class="aa-product-title"><a href="#"><?php echo $name?></a></h4>
-                      <span class="aa-product-price"><?php echo $price?>.00</span><span class="aa-product-price"><del>$65.50</del></span>
+                      <h4 class="aa-product-title">
+                      <a href="#"><?php echo $name?></a></h4>
+                      <span class="aa-product-price">
+                      <?php echo $price?>.00</span>
+                      <span class="aa-product-price"><del>$65.50</del></span>
                     </figcaption>
                   </figure>                     
                   <div class="aa-product-hvr-content">
-                    <!-- <a href="#" data-toggle="tooltip" data-placement="top" title="Add to Wishlist"><span class="fa fa-heart-o"></span></a>
-                    <a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><span class="fa fa-exchange"></span></a> -->
-                    <a href="#" data-toggle2="tooltip" data-placement="top" title="Quick View" data-toggle="modal" data-target="#quick-view-modal"><span class="fa fa-search"></span></a>                            
+                    <!-- <a href="#" data-toggle="tooltip" data-placement="top" 
+                    title="Add to Wishlist"><span class="fa fa-heart-o"></span></a>
+                    <a href="#" data-toggle="tooltip" data-placement="top"
+                     title="Compare">
+                    <span class="fa fa-exchange"></span></a> -->
+                    <a href="#" data-toggle2="tooltip" data-placement="top"
+                     title="Quick View" data-toggle="modal" 
+                     data-target="#quick-view-modal"><span 
+                     class="fa fa-search"></span></a>                            
                   </div>
                   <!-- product badge -->
                   <span class="aa-badge aa-sale" href="#">SALE!</span>
@@ -604,40 +676,46 @@ $page='page1';
                                                -->
               </ul>
               <!-- quick view modal -->                  
-              <div class="modal fade" id="quick-view-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+              <div class="modal fade" id="quick-view-modal" tabindex="-1" 
+              role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                   <div class="modal-content">                      
                     <div class="modal-body">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <button type="button" class="close" data-dismiss="modal" 
+                    aria-hidden="true">&times;</button>
                       <div class="row">
                         <!-- Modal view slider -->
-                        <div class="col-md-6 col-sm-6 col-xs-12">                              
-                          <div class="aa-product-view-slider">                                
+                        <div class="col-md-6 col-sm-6 col-xs-12"> 
+
+                          <div class="aa-product-view-slider"> 
+
                             <div class="simpleLens-gallery-container" id="demo-1">
                               <div class="simpleLens-container">
                                   <div class="simpleLens-big-image-container">
-                                      <a class="simpleLens-lens-image" data-lens-image="img/view-slider/large/polo-shirt-1.png">
-                                          <img src="img/view-slider/medium/polo-shirt-1.png" class="simpleLens-big-image">
+                                      <a class="simpleLens-lens-image" 
+                            data-lens-image="img/view-slider/large/polo-shirt-1.png">
+                            <img src="img/view-slider/medium/polo-shirt-1.png"
+                                           class="simpleLens-big-image">
                                       </a>
                                   </div>
                               </div>
                               <div class="simpleLens-thumbnails-container">
-                                  <a href="#" class="simpleLens-thumbnail-wrapper"
-                                     data-lens-image="img/view-slider/large/polo-shirt-1.png"
-                                     data-big-image="img/view-slider/medium/polo-shirt-1.png">
-                                      <img src="img/view-slider/thumbnail/polo-shirt-1.png">
-                                  </a>                                    
-                                  <a href="#" class="simpleLens-thumbnail-wrapper"
-                                     data-lens-image="img/view-slider/large/polo-shirt-3.png"
-                                     data-big-image="img/view-slider/medium/polo-shirt-3.png">
-                                      <img src="img/view-slider/thumbnail/polo-shirt-3.png">
-                                  </a>
+                      <a href="#" class="simpleLens-thumbnail-wrapper"
+                          data-lens-image="img/view-slider/large/polo-shirt-1.png"
+                          data-big-image="img/view-slider/medium/polo-shirt-1.png">
+                          <img src="img/view-slider/thumbnail/polo-shirt-1.png">
+                      </a>                                    
+                        <a href="#" class="simpleLens-thumbnail-wrapper"
+                            data-lens-image="img/view-slider/large/polo-shirt-3.png"
+                            data-big-image="img/view-slider/medium/polo-shirt-3.png">
+                            <img src="img/view-slider/thumbnail/polo-shirt-3.png">
+                        </a>
 
-                                  <a href="#" class="simpleLens-thumbnail-wrapper"
-                                     data-lens-image="img/view-slider/large/polo-shirt-4.png"
-                                     data-big-image="img/view-slider/medium/polo-shirt-4.png">
-                                      <img src="img/view-slider/thumbnail/polo-shirt-4.png">
-                                  </a>
+                        <a href="#" class="simpleLens-thumbnail-wrapper"
+                            data-lens-image="img/view-slider/large/polo-shirt-4.png"
+                            data-big-image="img/view-slider/medium/polo-shirt-4.png">
+                            <img src="img/view-slider/thumbnail/polo-shirt-4.png">
+                        </a>
                               </div>
                             </div>
                           </div>
@@ -648,9 +726,14 @@ $page='page1';
                             <h3>T-Shirt</h3>
                             <div class="aa-price-block">
                               <span class="aa-product-view-price">$34.99</span>
-                              <p class="aa-product-avilability">Avilability: <span>In stock</span></p>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis animi, veritatis quae repudiandae quod nulla porro quidem, itaque quis quaerat!</p>
+                                <p class="aa-product-avilability">Avilability: 
+                                <span>In stock</span></p>
+                              </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur
+                             adipisicing elit. 
+                            Officiis animi, veritatis quae 
+                            repudiandae quod nulla porro quidem, 
+                            itaque quis quaerat!</p>
                             <h4>Size</h4>
                             <div class="aa-prod-view-size">
                               <a href="#">S</a>
@@ -674,7 +757,8 @@ $page='page1';
                               </p>
                             </div>
                             <div class="aa-prod-view-bottom">
-                              <a href="#" class="aa-add-to-cart-btn"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
+                              <a href="#" class="aa-add-to-cart-btn"><span
+                               class="fa fa-shopping-cart"></span>Add To Cart</a>
                               <a href="#" class="aa-add-to-cart-btn">View Details</a>
                             </div>
                           </div>
@@ -701,7 +785,8 @@ $page='page1';
         <div class="col-md-12">
           <div class="aa-subscribe-area">
             <h3>Subscribe our newsletter </h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, velit!</p>
+            <p>Lorem ipsum dolor sit amet,
+             consectetur adipisicing elit. Ex, velit!</p>
             <form action="" class="aa-subscribe-form">
               <input type="email" name="" id="" placeholder="Enter your Email">
               <input type="submit" value="Subscribe">
@@ -811,7 +896,8 @@ $page='page1';
     <div class="modal-dialog">
       <div class="modal-content">                      
         <div class="modal-body">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <button type="button" class="close" data-dismiss="modal"
+         aria-hidden="true">&times;</button>
           <h4>Login or Register</h4>
           <form class="aa-login-form" action="">
             <label for="">Username or Email address<span>*</span></label>
@@ -819,7 +905,8 @@ $page='page1';
             <label for="">Password<span>*</span></label>
             <input type="password" placeholder="Password">
             <button class="aa-browse-btn" type="submit">Login</button>
-            <label for="rememberme" class="rememberme"><input type="checkbox" id="rememberme"> Remember me </label>
+            <label for="rememberme" class="rememberme">
+            <input type="checkbox" id="rememberme"> Remember me </label>
             <p class="aa-lost-password"><a href="#">Lost your password?</a></p>
             <div class="aa-register-now">
               Don't have an account?<a href="account.html">Register now!</a>

@@ -481,11 +481,13 @@ $page='page1';
                 <li>
                   
                   <figure>
-                  <a class="aa-product-img" href="product-detail.php?pid=<?php echo $pid;?>">
+                  <a class="aa-product-img"
+                   href="product-detail.php?pid=<?php echo $pid;?>">
                   <img style="width:250px;height:260px" 
                     src="<?php echo $img ?>" 
                     alt="polo shirt img"></a>
-                    <a class="aa-add-card-btn" href="product-detail.php?pid=<?php echo $pid;?>">
+                    <a class="aa-add-card-btn" 
+                    href="product-detail.php?pid=<?php echo $pid;?>">
                     <span class="fa fa-shopping-cart"></span>Add To Cart</a>
                     <figcaption>
                       <h4 class="aa-product-title"><a href=""><?php echo $name?>
@@ -646,7 +648,8 @@ $page='page1';
             while ($rows=$result->fetch_assoc()) {
                 $cat=$rows['cname']; 
                 ?>  
-                <li><a href="product.php?catid=<?php echo $rows['category_id'];?>" ><?php echo $cat?></a></li>
+                <li><a href="product.php?catid=<?php echo $rows['category_id'];?>" >
+                <?php echo $cat?></a></li>
                 <!-- <li><a href="">Women</a></li>
                 <li><a href="">Kids</a></li>
                 <li><a href="">Electornics</a></li>
@@ -699,7 +702,7 @@ $page='page1';
                  <button class="aa-filter-btn" type="submit">Filter</button>
                </form>
                         <?php
-                      }
+                    }
                 }
                 ?>
               </div>              

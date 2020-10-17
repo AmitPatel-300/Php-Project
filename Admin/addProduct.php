@@ -39,7 +39,8 @@ if (isset($_POST['add'])) {
     
     $sql="INSERT INTO products(`pname`, `price`, `image`, `description` ,
      `category_id` , `tags` , `color_id`) VALUES ('".$pname."',
-     '".$price."', '".$folder."', '".$desc."', '".$cid."', '".$tag."' , '".$color."')";
+     '".$price."', '".$folder."', '".$desc."', '".$cid."', '".$tag."' , 
+     '".$color."')";
 
      $result=$conn->query($sql);
     if ($result === true) {
