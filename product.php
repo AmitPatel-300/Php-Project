@@ -501,7 +501,7 @@ $page='page1';
                   </figure>
                                         
                   <div class="aa-product-hvr-content">
-                    <a href="#" data-toggle2="tooltip" data-placement="top" 
+                    <a href="#"  data-toggle2="tooltip" data-placement="top" 
                     title="Quick View" data-toggle="modal"
                      data-target="#quick-view-modal">
                 <span class="fa fa-search"></span></a>                            
@@ -512,7 +512,7 @@ $page='page1';
               </ul>
      
               <!-- quick view modal -->                  
-              <div class="modal fade" id="quick-view-modal" tabindex="-1"
+              <div class="modal fade" id="quick-view-modal"  tabindex="-1"
                role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                   <div class="modal-content">                      

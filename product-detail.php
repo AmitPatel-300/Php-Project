@@ -52,7 +52,7 @@ $page='page1';
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
   </head>
   <body>  
@@ -81,7 +81,9 @@ $page='page1';
                 <!-- start language -->
                 <div class="aa-language">
                   <div class="dropdown">
-                    <a class="btn dropdown-toggle" href="#" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    <a class="btn dropdown-toggle" href="#" 
+                    type="button" id="dropdownMenu1" data-toggle="dropdown" 
+                     aria-haspopup="true" aria-expanded="true">
                       <img src="img/flag/english.jpg" alt="english flag">ENGLISH
                       <span class="caret"></span>
                     </a>
@@ -371,6 +373,7 @@ $page='page1';
                             $name=$rows['pname'];  
                             $desc=$rows['description'];
                             $pid=$rows['product_id'];   
+                            $category=$rows['category_id'];
                         ?>  
                 <!-- Modal view slider -->
                 <div class="col-md-5 col-sm-5 col-xs-12">                              
@@ -423,25 +426,39 @@ $page='page1';
                       <a href="#" class="aa-color-white"></a>                      
                     </div>
                     <div class="aa-prod-quantity">
-                      <form action="">
-                        <select id="" name="">
-                          <option selected="1" value="0">1</option>
-                          <option value="1">2</option>
-                          <option value="2">3</option>
-                          <option value="3">4</option>
-                          <option value="4">5</option>
-                          <option value="5">6</option>
+                      <form action="cart.php" method="POST">  
+                        
+                        <select id="sel" name="quan">
+                          <option selected="1" value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
                         </select>
-                      </form>
-                      <p class="aa-prod-category">
-                        Category: <a href="#">Polo T-Shirt</a>
+                        <input type="hidden" name="pname" value="<?php echo $name?>">
+                        <input type="hidden" name="price" value="<?php echo $price?>"> 
+                        <input type="hidden" name="img" value="<?php echo $img?>">                     
+                        <p class="aa-prod-category">
+                        Category: <a href="#"><?php 
+                        $sql2="Select * from categories where `category_id`='".$category."'";
+                        $result=$conn->query($sql2);
+                        if ($result->num_rows>0) {
+                          while ($row=$result->fetch_assoc()) {
+                            $cname=$row['cname'];
+                            echo $cname;
+                          }
+                        }
+                        ?>
+                        </a>
                       </p>
                     </div>
                     <div class="aa-prod-view-bottom">
-                      <a class="aa-add-to-cart-btn" href="#">Add To Cart</a>
+                      <input type="submit" class="aa-add-to-cart-btn" 
+                      style="background-color:transparent" value="Add To Cart" name="cart">
                       <a class="aa-add-to-cart-btn" href="#">Wishlist</a>
                       <a class="aa-add-to-cart-btn" href="#">Compare</a>
-                
+                      </form>
                     </div>
                   </div>
                 </div>
@@ -835,6 +852,7 @@ $page='page1';
   <script type="text/javascript" src="js/nouislider.js"></script>
   <!-- Custom js -->
   <script src="js/custom.js"></script> 
+
 
   </body>
 </html>
