@@ -233,7 +233,7 @@ $page='page1';
           <div class="navbar-collapse collapse">
             <!-- Left nav -->
             <ul class="nav navbar-nav">
-              <li><a href="index.html">Home</a></li>
+              <li><a href="product.php">Home</a></li>
               <li><a href="#">Men <span class="caret"></span></a>
             <ul class="dropdown-menu">                
             <li><a href="#">Casual</a></li>
@@ -341,8 +341,8 @@ $page='page1';
       <li><a href="contact.html">Contact</a></li>
       <li><a href="#">Pages <span class="caret"></span></a>
         <ul class="dropdown-menu">                
-          <li><a href="product.html">Shop Page</a></li>
-          <li><a href="product-detail.html">Shop Single</a></li>                
+          <li><a href="product.php">Shop Page</a></li>
+          <li><a href="product-detail.php">Shop Single</a></li>                
           <li><a href="404.html">404 Page</a></li>                
         </ul>
       </li>
@@ -682,23 +682,25 @@ $page='page1';
               <!-- price range -->
               <div class="aa-sidebar-price-range">
               <?php
-              $sql3="SELECT Max(`price`) AS max, Min(`price`) As min from products";
-              $result3=$conn->query($sql3);
-               if ($result3->num_rows >0) {
-                 while($rows=$result3->fetch_assoc()) {
-               $max=$rows['max'];
-               $min=$rows['min'];
-                 }}
-              ?>
+                  $sql3="SELECT Max(`price`) AS max, Min(`price`) As min from products";
+                  $result3=$conn->query($sql3);
+                if ($result3->num_rows >0) {
+                    while ($rows=$result3->fetch_assoc()) {
+                            $max=$rows['max'];
+                            $min=$rows['min']; 
+                        ?>
                <form action="">
                   <div id="skipstep" class="noUi-target noUi-ltr 
                   noUi-horizontal noUi-background">
                   </div>
-                  <span id="skip-value-lower" class="example-val"><?php echo $min ?></span>
-                 <span id="skip-value-upper" class="example-val">100.00</span>
+                  <span ><?php echo  $min ?>.00</span>
+                 <span ><?php echo $max ?>.00</span>
                  <button class="aa-filter-btn" type="submit">Filter</button>
-                       
                </form>
+                        <?php
+                      }
+                }
+                ?>
               </div>              
 
             </div>

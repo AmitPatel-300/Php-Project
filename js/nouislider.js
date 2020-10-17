@@ -160,6 +160,7 @@
 	},
 	defaultCssPrefix = 'noUi-';
 
+	
 
 // Value calculation
 
