@@ -361,7 +361,8 @@ $page='page1';
             <div class="aa-product-details-content">
               <div class="row">
               <?php
-                    $sql="Select * from products LIMIT 1 OFFSET 0";
+              $ppid=$_REQUEST['pid'];
+                    $sql="Select * from products where product_id='".$ppid."' ";
                     $result=$conn->query($sql);
                     if ($result->num_rows>0) {
                         while ($rows=$result->fetch_assoc()) {
@@ -566,8 +567,8 @@ $page='page1';
                     <a class="aa-product-img" href="#"><img style="width:250px;height:260px" src="<?php echo $img?>" alt="polo shirt img"></a>
                     <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                      <figcaption>
-                      <h4 class="aa-product-title"><a href="#">Polo T-Shirt</a></h4>
-                      <span class="aa-product-price">$45.50</span><span class="aa-product-price"><del>$65.50</del></span>
+                      <h4 class="aa-product-title"><a href="#"><?php echo $name?></a></h4>
+                      <span class="aa-product-price"><?php echo $price?>.00</span><span class="aa-product-price"><del>$65.50</del></span>
                     </figcaption>
                   </figure>                     
                   <div class="aa-product-hvr-content">

@@ -10,6 +10,7 @@
  * @license  https://opensource.org/licenses/MIT MIT license
  * @link     http://localhost/
  */
+
 $page='page1';
 ?>
 <!DOCTYPE html>
@@ -480,14 +481,14 @@ $page='page1';
                 <li>
                   
                   <figure>
-                  <a class="aa-product-img" href="#">
+                  <a class="aa-product-img" href="product-detail.php?pid=<?php echo $pid;?>">
                   <img style="width:250px;height:260px" 
                     src="<?php echo $img ?>" 
                     alt="polo shirt img"></a>
-                    <a class="aa-add-card-btn"href="#">
+                    <a class="aa-add-card-btn" href="product-detail.php?pid=<?php echo $pid;?>">
                     <span class="fa fa-shopping-cart"></span>Add To Cart</a>
                     <figcaption>
-                      <h4 class="aa-product-title"><a href="#"><?php echo $name?>
+                      <h4 class="aa-product-title"><a href=""><?php echo $name?>
                       </a></h4>
                       <span class="aa-product-price"><?php echo "$".$price.".00" ?>
                       </span>
