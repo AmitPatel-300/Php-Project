@@ -12,6 +12,7 @@
  */
 $page='page1';
 ?>
+<?php require 'config.php'?>
 <?php 
 if(isset($_POST['cart'])) {
     $pname=isset($_POST['pname'])?$_POST['pname']:'';
@@ -19,8 +20,19 @@ if(isset($_POST['cart'])) {
     $qnt=isset($_POST['quan'])?$_POST['quan']:'';
     $img=isset($_POST['img'])?$_POST['img']:'';
     $total=($price*$qnt);
+
+    $sql="INSERT INTO cartdata(`pname`, `pprice`, `image`, `quantity`, `total`) VALUES ('".$pname."',
+    '".$price."', '".$img."', '".$qnt."', '".$total."')";
+
+    $result=$conn->query($sql);
+    if ($result === true) { 
+    } else {
+        $errors= array('input' => 'form', 'msg'=> $conn->error);
+    }
+    $conn->close();
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -380,14 +392,16 @@ if(isset($_POST['cart'])) {
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
+                                            <tr>
                         <td><a class="remove" href="#"><fa class="fa fa-close"></fa></a></td>
-                        <td><a href="#"><img style="width:260px;height:250px" src="<?php echo $img ?>" alt="img"></a></td>
+                        <td><a href="#"><img style="width:150px;height:120px" src="<?php echo $img ?>" alt="img"></a></td>
                         <td><a class="aa-cart-title" href="#"><?php echo $pname?></a></td>
                         <td>$<?php echo $price ?></td>
                         <td><input class="aa-cart-quantity" type="number" value="<?php  echo $qnt?>"></td>
                         <td>$<?php echo $total?></td>
                       </tr>
+                      
+                      
                       <!-- <tr>
                         <td><a class="remove" href="#"><fa class="fa fa-close"></fa></a></td>
                         <td><a href="#"><img src="img/man/polo-shirt-2.png" alt="img"></a></td>
