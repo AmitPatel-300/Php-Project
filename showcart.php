@@ -30,7 +30,7 @@ if (isset($_REQUEST['qnt'])) {
        <div class="col-md-12">
          <div class="cart-view-area">
            <div class="cart-view-table">
-             <form action="">
+             
                <div class="table-responsive">
                   <table class="table">
                     <thead>
@@ -64,10 +64,16 @@ if (isset($_REQUEST['qnt'])) {
                         <td><a class="aa-cart-title" href="#">
                             <?php echo $PNAME?></a></td>
                         <td>$<?php echo $PPRICE ?></td>
-                        <form action="showcart.php" method="POST">
+                        <form action="UpdateCart.php" method="POST">
+                        
                         <td><input class="aa-cart-quantity" 
-                        type="number" min="1" value="<?php  echo $QNT?>" ></td>
+                        type="number" name="QUANTITY" min="1" value="<?php  echo $QNT?>" >
+                        <input type="hidden" name="pname" value="<?php echo $PNAME?>">
+                        <input type="hidden" name="total" value="<?php echo $TOTAL?>">
+                        <input  style="width:70px;height:30px;background-color:black;color:white"
+                         type="submit" value="update" name="update" ></td>
                         <td>$<?php echo $TOTAL?></td>
+                        </form>
                       </tr>
                             <?php
                         }
