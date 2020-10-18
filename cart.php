@@ -11,6 +11,7 @@
  * @link     http://localhost/
  */
 $page='page1';
+$cart=array();
 ?>
 <?php require 'config.php'?>
 <?php 
@@ -21,6 +22,8 @@ if (isset($_POST['cart'])) {
     $img=isset($_POST['img'])?$_POST['img']:'';
     $total=($price*$qnt);
 
+    $cart=array('name'->$pname);
+    echo $cart;
     $sql="INSERT INTO cartdata(`pname`, `pprice`, `image`, `quantity`, `total`) 
     VALUES ('".$pname."','".$price."', '".$img."', '".$qnt."', '".$total."')";
 
